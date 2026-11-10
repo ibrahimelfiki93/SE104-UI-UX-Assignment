@@ -1,0 +1,33 @@
+/* ********** X-Larg ********** */
+@media (min-width: 1200px) {}
+
+/* ********** Larg ********** */
+@media (max-width: 1199px) {}
+
+/* ********** Medium ********** */
+@media (max-width: 992px) {}
+
+/* ********** Small ********** */
+@media (max-width: 768px) {}
+
+/* ********** X-Small ********** */
+@media (max-width: 576px) {
+
+  .hero-quote,
+  .about,
+  .check {
+    font-size: 12px;
+  }
+}
+
+/* ********** XX-Small ********** */
+@media (max-width: 450px) {}
+
+
+/* ********** Custom Bootstrap ********** */
+@media (min-width: 576px) {
+
+  .card-group>.card {
+    flex: auto;
+  }
+}

@@ -1,0 +1,27 @@
+/* ========================================
+   CSS Variables
+======================================== */
+
+:root {
+
+  /* Brand */
+  --brand-hex: #12B2A9;
+  --brand-hover: #0F9D95;
+  --brand-light: #D7F5F2;
+  --brand-rgb: 18, 178, 169;
+
+  /* Bootstrap */
+  --bs-primary-rgb: var(--brand-rgb);
+
+  /* Fonts */
+  --font-heading: "Cairo", sans-serif;
+  --font-body: "Tajawal", sans-serif;
+
+  /* Transition */
+  --transition: 0.3s ease-in-out;
+
+}
+
+.about-img {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <!-- == Basic Meta == -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- == SEO == -->
+  <title>Personal Portfolio</title>
+
+  <meta name="description" content="Personal portfolio.">
+
+  <meta name="author" content="Ibrahim Muhammad">
+
+  <!-- == Canonical == -->
+  <link rel="canonical" href="https://ibrahimelfiki93-dev.web.app/en/">
+
+  <!-- == Alternate Languages == -->
+  <link rel="alternate" hreflang="en" href="https://ibrahimelfiki93-dev.web.app/en/">
+
+  <link rel="alternate" hreflang="ar" href="https://ibrahimelfiki93-dev.web.app/ar/">
+
+  <link rel="alternate" hreflang="x-default" href="https://ibrahimelfiki93-dev.web.app/en/">
+
+  <!-- == Favicon == -->
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+
+  <!-- == Fonts == -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- == Vendor CSS == -->
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap-icons/bootstrap-icons.min.css">
+
+  <!-- == Custom CSS == -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+
+</head>
+
+<body>
+
+  <!-- == Start Header == -->
+  <header>
+
+    <!-- Start Navbar -->
+    <nav class="navbar fixed-top px-3 py-1 shadow" aria-label="Main Navigation" data-navbar>
+      <div class="d-flex align-items-center justify-content-center">
+
+        <!-- Logo -->
+        <div><a href="./" class="navbar-brand text-primary fs-3">LOGO</a></div>
+
+        <!-- Navbar Menu -->
+        <div class="navbar-menu ms-3 d-none d-lg-block">
+          <ul class="list-unstyled d-flex align-items-center justify-content-center m-0">
+
+            <li class="mx-1 px-1">
+              <a class="nav-link" href="#about">
+                <i class="bi bi-person"></i>
+                <span>About</span>
+              </a>
+            </li>
+
+            <li class="mx-1 px-1">
+              <a class="nav-link" href="#services">
+                <i class="bi bi-gear"></i>
+                <span>Services</span>
+              </a>
+            </li>
+
+            <li class="mx-1 px-1">
+              <a class="nav-link" href="#portfolio">
+                <i class="bi bi-briefcase"></i>
+                <span>Portfolio</span>
+              </a>
+            </li>
+
+            <li class="mx-1 px-1">
+              <a class="nav-link" href="#contact">
+                <i class="bi bi-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Desktop Actions -->
+      <div class="d-none d-lg-block">
+        <ul class="list-unstyled d-flex align-items-center justify-content-center m-0">
+
+          <!-- Language -->
+          <li class="mx-1">
+            <div class="dropdown lang-switcher dropstart" data-bs-auto-close="outside">
+
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate fs-5"></i>
+              </button>
+
+              <ul class="dropdown-menu">
+
+                <li>
+                  <a class="dropdown-item" href="/ar/" data-language="nav.language_ar">
+                    <img src="/assets/img/ar.png" alt="Arabic" class="mx-1 d-inline" style="width:17%;">
+                    <span>العربية</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item active" href="/en/" data-language="nav.language_en">
+                    <img src="/assets/img/en.png" alt="English" class="mx-1 d-inline" style="width:17%;">
+                    <span>English</span>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="vr"></div>
+          </li>
+
+          <!-- Theme -->
+          <li class="mx-1">
+            <div class="dropdown theme-switcher dropstart" data-bs-auto-close="outside">
+
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-brightness-high-fill fs-6 theme-icon-light"></i>
+                <i class="bi bi-moon-stars-fill fs-6 d-none theme-icon-dark"></i>
+              </button>
+
+              <ul class="dropdown-menu">
+
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-theme-value="light">
+                    <i class="bi bi-brightness-high icon-theme"></i>
+                    <span class="mx-2">Light</span>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-theme-value="dark">
+                    <i class="bi bi-moon-stars icon-theme"></i>
+                    <span class="mx-2">Dark</span>
+                  </button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-theme-value="auto">
+                    <i class="bi bi-circle-half icon-theme"></i>
+                    <span class="mx-2">Auto</span>
+                  </button>
+
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarList"
+        aria-controls="navbarList"><i class="bi bi-list fs-4"></i></button>
+
+      <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-start" id="navbarList" tabindex="-1" aria-labelledby="navbarListLabel"
+        role="dialog">
+
+        <div class="offcanvas-header">
+          <h2 id="navbarListLabel" class="m-0">
+            <a href="./" class="navbar-brand fw-bold text-primary">LOGO</a>
+          </h2>
+          <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas">
+            <i class="bi bi-x-square fs-5"></i>
+          </button>
+        </div>
+
+        <div class="offcanvas-body">
+
+          <!-- Mobile Navigation -->
+          <nav aria-label="Mobile Navigation">
+            <ul class="list-unstyled row g-2 m-0">
+
+              <li class="col-6">
+                <a class="nav-link" href="#about">
+                  <i class="bi bi-person"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="col-6">
+                <a class="nav-link" href="#services">
+                  <i class="bi bi-gear"></i>
+                  <span>Services</span>
+                </a>
+              </li>
+
+              <li class="col-6">
+                <a class="nav-link" href="#portfolio">
+                  <i class="bi bi-briefcase"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+
+              <li class="col-6">
+                <a class="nav-link" href="#contact">
+                  <i class="bi bi-envelope"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+
+          <hr class="my-4">
+
+          <!-- Language -->
+          <div class="dropdown mb-3" data-bs-auto-close="outside">
+
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-translate"></i>
+              <span class="ms-1 small">Languages</span>
+            </button>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a class="dropdown-item" href="/ar/">
+                  <img src="/assets/img/ar.png" alt="Arabic" class="mx-1 d-inline" style="width:17%;">
+                  <span>العربية</span>
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item active" href="/en/" data-language="nav.language_en">
+                  <img src="/assets/img/en.png" alt="English" class="mx-1 d-inline" style="width:17%;">
+                  <span data-i18n="nav.en">English</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!-- Theme -->
+          <div class="dropdown theme-switcher" data-bs-auto-close="outside">
+
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-brightness-high-fill fs-6 theme-icon-light"></i>
+              <i class="bi bi-moon-stars-fill fs-6 d-none theme-icon-dark"></i>
+              <span class="ms-1 small">Themes</span>
+            </button>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <button class="dropdown-item d-flex align-items-center" data-theme-value="light">
+                  <i class="bi bi-brightness-high icon-theme"></i>
+                  <span class="mx-2">Light</span>
+                </button>
+              </li>
+
+              <li>
+                <button class="dropdown-item d-flex align-items-center" data-theme-value="dark">
+                  <i class="bi bi-moon-stars icon-theme"></i>
+                  <span class="mx-2">Dark</span>
+                </button>
+              </li>
+
+              <li>
+                <button class="dropdown-item d-flex align-items-center" data-theme-value="auto">
+                  <i class="bi bi-circle-half"></i>
+                  <span class="mx-2">Auto</span>
+                </button>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Hero -->
+    <section id="hero" class="min-vh-100 pt-5 pm-3 d-flex align-items-center justify-content-evenly shadow hero"
+      aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <!-- Content -->
+          <div class="col-12 col-lg-7 text-center text-lg-start order-2 order-lg-1 py-5 py-lg-0">
+
+            <p class="mb-2 fs-3" aria-hidden="true">
+              Hello<span class="brand">,</span>
+              <span>I<span class="brand">'</span>m</span>
+            </p>
+
+            <h1 id="hero-title" class="fw-bold display-4 my-3 text-shadow" aria-label="Ibrahim Muhammad El-Fiki">
+              FName
+              <span class="brand">LName</span>
+            </h1>
+
+            <p class="mb-5" role="doc-subtitle">
+              <span class="color-secondary mb-4 d-block fw-bold fs-6 fs-md-5">
+                Job Title
+                <span class="brand mx-1">|</span>
+                Job Title
+              </span>
+              <span>
+                Lorem ipsum dolor sit amet consectetur. <br class="d-none d-md-block">
+                Lorem ipsum dolor sit amet consectetur.
+              </span>
+            </p>
+
+            <a href="#contact" class="px-3 py-2 fw-bold mt-3 me-4 rounded-pill cta-btn">Let's Talk</a>
+            <a href="#" class="px-3 py-2 fw-bold mt-3 me-4 rounded-pill cta-btn">My Resume</a>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-5 d-flex justify-content-center order-1 order-lg-2">
+            <div class="hero-image mt-5 mt-lg-0 mb-4 mb-lg-0">
+              <span class="image-halo"></span>
+              <img src="/assets/img/header.png" loading="lazy" decoding="async" alt="FName LName" title="FName LName"
+                class="img-fluid position-relative w-100">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+  </header>
+  <!-- == End Header == -->
+
+  <!-- == Start Main Content == -->
+  <main>
+
+    <!-- Start About -->
+    <section id="about" class="my-5 pt-4">
+      <h2 class="main-heading mb-5">About</h2>
+      <div class="container">
+        <div class="row align-items-end justify-content-center px-1">
+
+          <!-- Image -->
+          <div class="col-12 col-md- col-lg-5 mb-4 mb-lg-0">
+            <img src="/assets/img/about.png" alt="FName LName" title="FName LName" class="w-100 rounded-2">
+          </div>
+
+          <!-- Content -->
+          <div class="col-12 col-md- col-lg-7 ps-lg-5">
+
+            <p>
+              <b class="brand">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </b>
+            </p>
+
+            <p class="about" style="line-height: 3;">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt inventore magni nesciunt sequi mollitia
+              amet facere molestiae illum officiis doloremque similique vel dicta laborum suscipit cumque, odio neque ad
+              iure?
+            </p>
+
+            <ul class="list-unstyled check">
+              <li class="my-3 text-secondary">
+                <i class="bi bi-check2-circle"></i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+
+              <li class="my-3 text-secondary">
+                <i class="bi bi-check2-circle"></i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+
+              <li class="my-3 text-secondary">
+                <i class="bi bi-check2-circle"></i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+
+              <li class="my-3 text-secondary">
+                <i class="bi bi-check2-circle"></i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+            </ul>
+
+            <a href="#" class="cus-btn">Explore My Journey</a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End About -->
+
+    <!-- Start Services -->
+    <section id="services" class="my-5 pt-4">
+      <h2 class="main-heading mb-5">Service</h2>
+      <div class="container">
+
+        <!-- Core Services -->
+        <div class="core-services py-3">
+
+          <h3 class="fs-5 text-center brand text-decoration-underline mb-4">Core Services</h3>
+
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br class="d-none d-md-block">
+            Sunt inventore magni nesciunt sequi mollitia
+          </p>
+
+          <div class="row align-items-end justify-content-center">
+
+            <!-- Service 01 -->
+            <div class="col-12 my-4 my-lg-5">
+              <div class="card border-0">
+                <div class="row g-0">
+
+                  <div class="col-md-6 order-2 order-md-1">
+                    <div class="card-body py-4">
+
+                      <h3 class="fs-5 card-title brand">
+                        Service Title
+                      </h3>
+
+                      <p class="card-text my-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias possimus iusto pariatur. Enim
+                        harum eius iure ullam quidem, amet nihil, dolor corporis suscipit nostrum at? Iusto impedit
+                        mollitia ducimus a?
+                      </p>
+
+                      <ul class="list-unstyled text-body-secondary small">
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                      </ul>
+
+                      <a href="#contact" class="cus-btn">Let's Work Together</a>
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 order-1 order-md-2">
+                    <img src="https://placehold.co/500/dfaaf0/333333?text=Placholder&font=poppins"
+                      class="img-fluid rounded-2 h-100" alt="Service Title" title="Service Title">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 02 -->
+            <div class="col-12 my-4 my-lg-5">
+              <div class="card border-0">
+                <div class="row g-0">
+
+                  <div class="col-md-6">
+                    <img src="https://placehold.co/500/a0c4ff/333333?text=Placholder&font=poppins"
+                      class="img-fluid rounded-2 h-100" alt="Service Title" title="Service Title">
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card-body py-4">
+
+                      <h3 class="fs-5 card-title brand">Service Title</h3>
+
+                      <p class="card-text my-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias possimus iusto pariatur. Enim
+                        harum eius iure ullam
+                        quidem, amet nihil, dolor corporis suscipit nostrum at? Iusto impedit mollitia ducimus a?
+                      </p>
+
+                      <ul class="list-unstyled text-body-secondary small">
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet.
+                        </li>
+
+                      </ul>
+
+                      <a href="#contact" class="cus-btn">Let's Work Together</a>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Additional Services -->
+        <div class="additional-services py-3">
+
+          <h3 class="fs-5 text-center brand text-decoration-underline mb-4">Additional Services</h3>
+
+          <p class="text-center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="row align-items-end justify-content-center">
+
+            <!-- Service 01 -->
+            <div class="col-12 col-lg-5 my-4">
+              <div class="card border-0">
+                <div class="row g-0">
+
+                  <div class="col-12 mb-2">
+                    <img src="https://placehold.co/400/c1fba4/333333?text=Placholder&font=poppins"
+                      class="img-fluid rounded-2 h-100" alt="Service Title" title="Service Title">
+                  </div>
+
+                  <div class="col-12">
+                    <div class="card-body py-4">
+
+                      <h3 class="fs-5 card-title brand">
+                        Service Title
+                      </h3>
+
+                      <p class="card-text my-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas deserunt nulla quam illo
+                        perferendis nobis ad temporibus quae nam, sit consectetur amet sequi aliquid.
+                      </p>
+
+                      <ul class="list-unstyled text-body-secondary small">
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+                      </ul>
+
+                      <a href="#contact" class="cus-btn">Let's Work Together</a>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 02 -->
+            <div class="col-12 col-lg-5 my-4">
+              <div class="card border-0">
+                <div class="row g-0">
+
+                  <div class="col-12 mb-2">
+                    <img src="https://placehold.co/400/ffadad/333333?text=Placholder&font=poppins"
+                      class="img-fluid rounded-2 h-100" alt="Service Title" title="Service Title">
+                  </div>
+
+                  <div class="col-12">
+                    <div class="card-body py-4">
+
+                      <h3 class="fs-5 card-title brand">
+                        Service Title
+                      </h3>
+
+                      <p class="card-text my-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas deserunt nulla quam illo
+                        perferendis nobis ad
+                        temporibus quae nam, sit consectetur amet sequi aliquid.
+                      </p>
+
+                      <ul class="list-unstyled text-body-secondary small">
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                        <li class="fw-bold">
+                          <i class="bi bi-arrow-right-circle"></i>
+                          Lorem ipsum dolor sit amet consectetur.
+                        </li>
+
+                      </ul>
+
+                      <a href="#" class="cus-btn">Show Details</a>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start Portfolio -->
+    <section id="portfolio" class="my-5 pt-4">
+      <h2 class="main-heading mb-5">Portfolio</h2>
+      <div class="container">
+        <div class="py-3">
+          <div class="card-group gap-3 row justify-content-center">
+
+            <div class="card rounded-3 col-12 col-md-5 col-lg-2 my-lg-0 my-4">
+              <img src="https://placehold.co/1024/ffadad/333333?text=Placholder&font=poppins"
+                class="card-img-top rounded-3 p-1 shadow-sm" alt="Project Name" title="Project Name">
+              <div class="card-body">
+                <h3 class="fs-5 card-title brand">Project Name</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor explicabo maxime sit ducimus
+                  dignissimos suscipit recusandae nam doloremque.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="" class="cus-underline-btn visit mx-1">GitHub</a>
+                <a href="" class="cus-underline-btn visit mx-1">Demo</a>
+              </div>
+            </div>
+
+            <div class="card rounded-3 col-12 col-md-5 col-lg-2 my-lg-0 my-4">
+              <img src="https://placehold.co/1024/c1fba4/333333?text=Placholder&font=poppins"
+                class="card-img-top rounded-3 p-1 shadow-sm" alt="Project Name" title="Project Name">
+              <div class="card-body">
+                <h3 class="fs-5 card-title brand">Project Name</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor explicabo maxime sit ducimus
+                  dignissimos suscipit recusandae nam doloremque.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="" class="cus-underline-btn visit mx-1">GitHub</a>
+                <a href="" class="cus-underline-btn visit mx-1">Demo</a>
+              </div>
+            </div>
+
+            <div class="card rounded-3 col-12 col-md-5 col-lg-2 my-lg-0 my-4">
+              <img src="https://placehold.co/1024/a0c4ff/333333?text=Placholder&font=poppins"
+                class="card-img-top rounded-3 p-1 shadow-sm" alt="Project Name" title="Project Name">
+              <div class="card-body">
+                <h3 class="fs-5 card-title brand">Project Name</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor explicabo maxime sit ducimus
+                  dignissimos suscipit recusandae nam doloremque.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="" class="cus-underline-btn visit mx-1">GitHub</a>
+                <a href="" class="cus-underline-btn visit mx-1">Demo</a>
+              </div>
+            </div>
+
+            <div class="card rounded-3 col-12 col-md-5 col-lg-2 my-lg-0 mt-4">
+              <img src="https://placehold.co/1024/dfaaf0/333333?text=Placholder&font=poppins"
+                class="card-img-top rounded-3 p-1 shadow-sm" alt="Project Name" title="Project Name">
+              <div class="card-body">
+                <h3 class="fs-5 card-title brand">Project Name</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor explicabo maxime sit ducimus
+                  dignissimos suscipit recusandae nam doloremque.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="" class="cus-underline-btn visit mx-1">GitHub</a>
+                <a href="" class="cus-underline-btn visit mx-1">Demo</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio -->
+
+    <!-- Start Contact -->
+    <section id="contact" class="my-5 pt-4">
+      <h2 class="main-heading mb-5">Contact</h2>
+      <div class="container">
+        <div class="row align-items-start justify-content-center">
+
+          <!-- Contact Content -->
+          <div class="col-12 col-md-6 mt-4">
+            <h3 class="fs-5 brand text-decoration-underline mb-4">LET'S CONNECT</h3>
+
+            <p class="mt-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor explicabo maxime sit ducimus
+              dignissimos suscipit recusandae nam doloremque.
+            </p>
+
+            <ul class="list-unstyled mt-4">
+              <li class="my-2">
+                <i class="bi bi-telephone"></i>
+                <a href="#" target="_blank" rel="noopener noreferrer" title="Call Me" aria-label="phone contact"
+                  class="foot-link brand text-decoration-underline">Call Me</a>
+              </li>
+
+              <li class="my-2">
+                <i class="bi bi-envelope-at"></i>
+                <a href="#" target="_blank" rel="noopener noreferrer" title="Send Me E-Mail" aria-label="mail contact"
+                  class="foot-link brand text-decoration-underline">Email
+                  Me</a>
+              </li>
+
+              <li class="my-2">
+                <i class="bi bi-whatsapp"></i>
+                <a href="#" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"
+                  aria-label="Chat on WhatsApp" class="foot-link brand text-decoration-underline">Message Me</a>
+              </li>
+            </ul>
+
+            <ul class="list-unstyled mt-5 d-flex align-items-center justify-content-start w-50">
+              <li class="mx-1">
+                <a href="#" class="link-icons" target="_blank" rel="noreferrer noopener" title="Linked-In">
+                  <img class="icons w-100" src="/assets/img/linkedin.png" alt="Linked-IN" title="Linked-IN">
+                </a>
+              </li>
+
+              <li class="mx-1">
+                <a href="#" class="link-icons" target="_blank" rel="noreferrer noopener" title="GitHub">
+                  <img class="icons w-100" src="/assets/img/github.png" alt="GitHub" title="GitHub">
+                </a>
+              </li>
+
+              <li class="mx-1">
+                <a href="#" class="link-icons" target="_blank" rel="noreferrer noopener" title="Facebook">
+                  <img class="icons w-100" src="/assets/img/facebook.png" alt="Facebook" title="Facebook">
+                </a>
+              </li>
+
+              <li class="mx-1">
+                <a href="#" class="link-icons" target="_blank" rel="noreferrer noopener" title="LinkTree">
+                  <img class="icons w-100" src="/assets/img/linktree.png" alt="LinkTree" title="LinkTree">
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-12 col-md-6 mt-4">
+            <div class="d-flex justify-content-center align-items-center">
+
+              <!-- Form Contact -->
+              <form class="w-100 text-center" id="contactForm">
+                <label for="name" class="d-block text-start w-75 brand fw-bold mx-auto mt-2">Name:</label>
+                <input class="w-75 my-2 rounded-2 border-0 px-2 py-1" type="text" id="name" placeholder="Full Name"
+                  required>
+
+                <label for="phone" class="d-block text-start w-75 brand fw-bold mx-auto mt-2">Phone:</label>
+                <input class="w-75 my-2 rounded-2 border-0 px-2 py-1" type="tel" id="phone" placeholder="Phone Number"
+                  required>
+
+                <label for="mail" class="d-block text-start w-75 brand fw-bold mx-auto mt-2">E-Mail:</label>
+                <input class="w-75 my-2 rounded-2 border-0 px-2 py-1" type="email" id="mail" placeholder="E-Mail"
+                  required>
+
+                <label for="subject" class="d-block text-start w-75 brand fw-bold mx-auto mt-2">Subject:</label>
+                <input class="w-75 my-2 rounded-2 border-0 px-2 py-1" type="text" id="subject" placeholder="Subject"
+                  required>
+
+                <label for="message" class="d-block text-start w-75 brand fw-bold mx-auto mt-2">Message:</label>
+                <textarea id="message" class="w-75 my-2 rounded-2 border-0 px-2 py-1" placeholder="Your Message"
+                  required></textarea>
+
+                <input type="submit" value="Send" class="fw-bold px-4 rounded-2 submit d-block mx-auto">
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Contact -->
+
+  </main>
+  <!-- == End Main Content == -->
+
+  <!-- == Start Footer == -->
+  <footer class="py-1">
+    <div class="container">
+      <p class="text-center m-0">
+        &copy; <span id="currentYear"></span>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-underline brand foot-link">FName
+          LName</a>. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- == End Footer == -->
+
+  <!-- == Start Scroll To Top Button == -->
+  <button id="scrollTopBtn" type="button" aria-label="Scroll to top" class="rounded-circle">
+    <i class="bi bi-caret-up-fill fs-5"></i>
+  </button>
+  <!-- == End Scroll To Top Button == -->
+
+  <!-- == Start Vendor JS == -->
+  <script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- == End Vendor JS == -->
+
+  <!-- == Start Custom JS == -->
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <!-- == End Custom JS == -->
+
+</body>
+
+</html>
