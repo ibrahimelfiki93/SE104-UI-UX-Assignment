@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- == Basic Meta == -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- == Robots == -->
+  <meta name="robots" content="noindex, follow">
+
+  <!-- == Canonical == -->
+  <link rel="canonical" href="https://ibrahimelfiki93-dev.web.app/">
+
+  <title>Redirecting...</title>
+
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/en/">
+  </noscript>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const supportedLanguages = ["ar", "en"];
+      const defaultLanguage = "en";
+      const savedLanguage = localStorage.getItem("language");
+
+      const targetLanguage =
+        supportedLanguages.includes(savedLanguage)
+          ? savedLanguage
+          : defaultLanguage;
+
+      window.location.replace(`/${targetLanguage}/`);
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
